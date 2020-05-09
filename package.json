@@ -23,7 +23,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "build:tailwind": "postcss src/scss/base.scss -o src/scss/tailwind.scss",
-    "build:storybook": "build-storybook -c .storybook -o .docs",
+    "build:storybook": "build-storybook -c .storybook -o docs",
     "storybook": "start-storybook -p 5000",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
