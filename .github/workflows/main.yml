@@ -24,6 +24,7 @@ jobs:
       run: |
         npm i
         npm run build:storybook
+        git commit -a -m "Updated docs"
     - name: Push new docs
       uses: ad-m/github-push-action@master
       with:
