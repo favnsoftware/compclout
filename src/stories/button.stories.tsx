@@ -9,7 +9,7 @@ export default {
 }
 
 export const primary = () => {
-    const label = text("Label", "See now!")
+    const label = text("Label", "|See now!|")
     const outlined = boolean("Outlined", false)
     return (
         <Button 
