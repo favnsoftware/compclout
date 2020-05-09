@@ -32,4 +32,6 @@ jobs:
     - name: Deploy new GH page
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
+        BRANCH: master
+        FOLDER: docs
         ACCESS_TOKEN: ${{ github.token }}

@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions'
 import { withKnobs, text, boolean } from '@storybook/addon-knobs'
 
 export default {
-    title: "Button",
+    title: "Button2",
     decorators: [withKnobs]
 }
 
