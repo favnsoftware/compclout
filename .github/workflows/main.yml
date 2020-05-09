@@ -13,10 +13,21 @@ jobs:
       with:
         node-version: 12
         registry-url: https://registry.npmjs.org/
-    - name: Build new docs
+    - name: Cache node modules
+      uses: actions/cache@v1
+      with:
+        path: node_modules
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.OS }}-build-${{ env.cache-name }}-
+          ${{ runner.OS }}-build-
+          ${{ runner.OS }}-
+    - name: Install dependencies
+      run: npm i
+    - name: Build docs
+      run: npm run build:storybook
+    - name: Deploy to gh-pages
       run: |
-        npm i
-        npm run build:storybook
         git config --local user.name "Github Action"
         git config --local user.email "action@github.com"
         npm run gh-pages-deploy
