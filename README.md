@@ -1,6 +1,8 @@
 # compclout
 Clout Software's own react component library based on Tailwind CSS
 
+### storybook documentation is hosted at https://cloutsoftware.github.io/compclout/index.html
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
