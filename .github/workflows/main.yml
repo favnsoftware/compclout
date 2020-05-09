@@ -19,6 +19,8 @@ jobs:
       run: |
         npm i
         npm run build:storybook
+        git config --local user.name "Github Action"
+        git config --local user.email "action@github.com"
     - name: Deploy new GH page
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
