@@ -23,7 +23,7 @@ jobs:
     - name: Build new docs
       run: |
         npm i
-        npm run build:storybooks
+        npm run build:storybook
     - name: Push new docs
       uses: ad-m/github-push-action@master
       with:
