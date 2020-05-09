@@ -15,23 +15,13 @@ jobs:
       with:
         node-version: 12
         registry-url: https://registry.npmjs.org/
-    - name: Config action push
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
     - name: Build new docs
       run: |
         npm i
         npm run build:storybook
-        git add .
-        git commit -m "Updated docs"
-    - name: Push new docs
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ github.token }}
     - name: Deploy new GH page
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
-        BRANCH: master
+        BRANCH: gh_page
         FOLDER: docs
         ACCESS_TOKEN: ${{ github.token }}
