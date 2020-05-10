@@ -43,7 +43,7 @@ jobs:
     - name: Update package version
       run: |
         git config --local user.email "action@github.com"
-        git config --local user.name "GitHub "GitHub Action"
+        git config --local user.name "GitHub Action"
         npm version patch
     - name: Publish new version
       run: |
