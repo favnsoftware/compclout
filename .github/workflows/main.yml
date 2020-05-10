@@ -31,3 +31,22 @@ jobs:
         git config --local user.name "Github Action"
         git config --local user.email "action@github.com"
         npm run gh-pages-deploy
+
+  publishtonpm:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 12
+        registry-url: https://registry.npmjs.org/
+    - name: Update package version
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub "GitHub Action"
+        npm version patch
+    - name: Publish new version
+      run: |
+        npm run dist
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
