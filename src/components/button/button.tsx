@@ -29,4 +29,4 @@ export const Button: FC<ButtonTypes> = ({ onClick, label = "Some label", outline
             <span>{label}</span>
         </button>
     )
-}
+};
