@@ -1,6 +1,6 @@
 {
   "name": "clout-components",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "description": "Library of react components used by Clout Software",
   "dependencies": {
     "@types/node": "^12.12.38",
