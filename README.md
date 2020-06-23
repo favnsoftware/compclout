@@ -23,17 +23,17 @@ Da kan andre se hvilke komponenter som jobbes på så ikke flere jobber på samm
 
 Navnet på branchen bør settes til komponentens navn for ovesiktlighet. Feks: 'Button' / 'Button-component'.
 
-Opprettelse av branch:
+* Opprettelse av branch: </br>
 https://guides.github.com/activities/hello-world/#branch
 
 
-Committs til en bestemt branch i Github Desktop:
+* Committs til en bestemt branch i Github Desktop: </br>
 https://help.github.com/en/desktop/contributing-to-projects/committing-and-reviewing-changes-to-your-project#1-choosing-a-branch-and-making-changes
 
 
-Åpne pull request for review før merge:
+* Åpne pull request for review før merge: </br>
 https://guides.github.com/activities/hello-world/#pr
 
 
-Merge branch med master:
+* Merge branch med master: </br>
 https://guides.github.com/activities/hello-world/#merge
