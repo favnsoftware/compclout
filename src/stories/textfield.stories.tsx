@@ -1,6 +1,5 @@
 import React from 'react'
 import { TextField } from '../components'
-import { action } from '@storybook/addon-actions'
 import { withKnobs, text, boolean } from '@storybook/addon-knobs'
 
 export default {
@@ -10,9 +9,15 @@ export default {
 
 export const first = () => {
     const label = text("Label", "Test")
+    const hint =  text("Hint", "Her er underteksten")
+    const error = boolean("Error", false)
     return (
         <TextField 
-            label={label}
+            label = {label}
+            error = {error}
+            front = ''
+            hint = {hint}
+            //children = ''
         />
     )
 };

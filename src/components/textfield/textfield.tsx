@@ -32,8 +32,7 @@ const INPUT = 'px-4 py-2 border-none rounded focus:outline-none w-full'
 const ERROR_MESSAGE = 'text-red-600'
 
 
-export const TextField: FC<TextFieldTypes> = ({ label = "Some label", front, 
-    children, hint = "Hinthint", error }) => {
+export const TextField: FC<TextFieldTypes> = ({ label = "Some label", front, hint = "Hinthint", error }) => {
     return (
         <div className={BASE}>
             {
@@ -49,12 +48,11 @@ export const TextField: FC<TextFieldTypes> = ({ label = "Some label", front,
                 <input
                     className={INPUT}
                 >
-                    { children }
                 </input>
                 
             </div>
             {
-                hint &&
+               { hint}  &&
                 <p className = {error ? ERROR_MESSAGE : ''}>
                     { hint }
                 </p>
