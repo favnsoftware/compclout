@@ -18,4 +18,4 @@ export const primary = () => {
             onChange = {action('Checked')}
         />
     )
-}
+};
