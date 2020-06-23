@@ -19,4 +19,4 @@ export const primary = () => {
             label={label}
         />
     )
-}
+};
