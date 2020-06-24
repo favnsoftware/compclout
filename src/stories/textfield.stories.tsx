@@ -8,16 +8,18 @@ export default {
 }
 
 export const first = () => {
-    const label = text("Label", "Test")
-    const hint =  text("Hint", "Her er underteksten")
+    const label = text("Label", "Information about the field")
+    const hint =  text("Hint", "Error message or other information will appear here")
     const error = boolean("Error", false)
+    const example = <p>Object</p>
     return (
         <TextField 
             label = {label}
             error = {error}
-            front = ''
+            front = {example}
             hint = {hint}
-            //children = ''
+            children = {example}
+            back = {example}
         />
     )
 };
