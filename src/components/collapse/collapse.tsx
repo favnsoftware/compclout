@@ -14,7 +14,7 @@ type CollapseTypes = {
 const getElementHeight = (element: React.RefObject<HTMLDivElement>) => {
     if (!element.current) {
         return 'auto';
-      }
+    }
     return element.current.scrollHeight;
 }
 export const Collapse:FC<CollapseTypes> = ({visible, children }) => {
@@ -22,17 +22,11 @@ export const Collapse:FC<CollapseTypes> = ({visible, children }) => {
     const rootRef = useRef<HTMLDivElement>(null);
     const [heightTimeout, setHeightTimeout] = useState<NodeJS.Timeout | null>(null);
 
-    console.log('console log 1', rootRef)
-
     useEffect(() => {
-        console.log('console log 2', rootRef)
-
-
         if(visible) {
             if(null !== rootRef.current) {
                 rootRef.current.style.minHeight = `${getElementHeight(rootRef)}px`; // MinHeight is used the content can grow larger if necessary
                 rootRef.current.style.display = 'block';
-                console.log('console log 3', rootRef)
 
                 // To allow nested collapses or height changes, height needs to be set to 'auto', sometime after minHeight is set
                 setHeightTimeout(setTimeout(() => {
@@ -58,7 +52,6 @@ export const Collapse:FC<CollapseTypes> = ({visible, children }) => {
 
     }, [visible, rootRef])
 
-    useEffect(() => {}, )
     return (
         <div
             className={styles.root}

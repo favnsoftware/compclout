@@ -7,10 +7,6 @@ type TextFieldTypes = {
      */
     label: string;
     /**
-     * Children??
-     */
-    children: object;
-    /**
      * Error message or other information
      */
     hint: string;
@@ -21,11 +17,11 @@ type TextFieldTypes = {
     /**
      * Text left in the field
      */
-    front: object;
+    front?: string;
     /**
      * Text right in the field
      */
-    back: object;
+    back?: string;
 }
 
 const BASE = 'mb-6 mt-4 w-full'
@@ -37,7 +33,7 @@ const INPUT = 'px-4 py-2 border-none rounded focus:outline-none w-full'
 const ERROR_MESSAGE = 'text-red-600'
 
 
-export const TextField: FC<TextFieldTypes> = ({ label = "Some label", front, hint = "Information", error, children, back }) => {
+export const TextField: FC<TextFieldTypes> = ({ label = "Some label", front, hint = "Information", error, back }) => {
     
     const [hasFocus, setHasFocus] = useState(false);
 
@@ -70,8 +66,7 @@ export const TextField: FC<TextFieldTypes> = ({ label = "Some label", front, hin
                     className={INPUT}
                     onFocus={onFocus}
                     onBlur={onBlur}
-                >
-                </input>
+                />
                 {
                     back &&
                     <div className={PADDING_BACK}>
