@@ -1,6 +1,5 @@
 import React, { FC, useRef, useState, useEffect } from 'react'
 import styles from './collapse.module.css'
-import { Mutable } from '@storybook/addon-knobs/dist/type-defs';
 type CollapseTypes = {
     /**
      * Boolean value of collapse visible state
@@ -9,19 +8,19 @@ type CollapseTypes = {
     /**
      * Children object contained inside collapse
      */
-    children: object;
+    children: React.ReactNode;
 }
 
-const getElementHeight = (el) => {
-    if (!el.current) {
+const getElementHeight = (element: React.RefObject<HTMLDivElement>) => {
+    if (!element.current) {
         return 'auto';
       }
-    return el.current.scrollHeight;
+    return element.current.scrollHeight;
 }
 export const Collapse:FC<CollapseTypes> = ({visible, children }) => {
     
     const rootRef = useRef<HTMLDivElement>(null);
-    const [heightTimeout, setHeightTimeout] = useState(null);
+    const [heightTimeout, setHeightTimeout] = useState<NodeJS.Timeout | null>(null);
 
     console.log('console log 1', rootRef)
 
