@@ -29,16 +29,16 @@ type ModalTypes = {
 }
 
 export const Modal:FC<ModalTypes> = ({show, children, center = true, transition, onBackdropClick}) => {
-    const [hasOpenOnce, setHasOpenOnce] = useState(false);
-    const [shouldShow, setShouldShow] = useState(false);
-    const [curTimeout, setCurTimeout] = useState(null);
+    const [hasOpenOnce, setHasOpenOnce] = useState<boolean>(false);
+    const [shouldShow, setShouldShow] = useState<boolean>(false);
+    const [curTimeout, setCurTimeout] = useState<NodeJS.Timeout | null>(null);
 
     useEffect(() => {
         if(show) {
             setHasOpenOnce(true);
-            disableBodyScroll();
+            disableBodyScroll(document.body);
         } else {
-            enableBodyScroll();
+            enableBodyScroll(document.body);
         }
 
     }, [show])
