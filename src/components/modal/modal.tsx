@@ -23,9 +23,9 @@ type ModalTypes = {
      */
     transition?: string;
     /**
-     * OnClick function that registers if you click outside the Modal?
+     * OnClick function that registers if you click outside the Modal
      */
-    onBackdropClick(): void; 
+    onBackdropClick?(): void; 
 }
 
 export const Modal:FC<ModalTypes> = ({show, children, center = true, transition, onBackdropClick}) => {
