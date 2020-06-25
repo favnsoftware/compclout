@@ -5,3 +5,4 @@ export * from './checkbox'
 export * from './collapse'
 
 export * from './portal'
+export * from './modal'

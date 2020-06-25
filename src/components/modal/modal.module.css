@@ -1,0 +1,75 @@
+.modal {
+    z-index: 1000;
+    position: fixed;
+    inset: 0;
+}
+
+.modal-container {
+    z-index: 1001;
+    width: 100%;
+    min-height: 100%;
+}
+
+.opacity {
+    transition: opacity ease-in-out 0.4s;
+}
+
+.opacity-enter {
+    opacity: 0.5;
+}
+
+.opacity-leave {
+    opacity: 0;
+}
+
+/* Modal animation */
+.bounce-enter {
+    animation-duration: 0.4s;
+    animation-fill-mode: both;
+    animation-name: bounce-in;
+}
+.bounce-leave {
+    animation-duration: 0.4s;
+    animation-fill-mode: both;
+    animation-name: bounce-out;
+}
+
+@keyframes bounce-in {
+    0% {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+    80% {
+        transform: scale(1.004);
+        -webkit-transform: scale(1.004);
+    }
+    100% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+}
+
+@keyframes bounce-out {
+    0% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+    20% {
+        transform: scale(1.004);
+        -webkit-transform: scale(1.004);
+    }
+    50% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+    
+    100% {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+    }
+}
