@@ -1,0 +1,63 @@
+.horizontal {
+    transform: translateY(0%) !important;
+}
+
+.drawer-enter {
+    animation-duration: 0.4s;
+    animation-fill-mode: both;
+    animation-name: slide-in;
+}
+
+.drawer-leave {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-name: slide-out;
+}
+
+.drawer-reverse-enter {
+    animation-duration: 0.4s;
+    animation-fill-mode: both;
+    animation-name: slide-reverse-in;
+}
+
+.drawer-reverse-leave {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-name: slide-reverse-out;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translate(-100%);
+    }
+    100% {
+        transform: translate(0%);
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        transform: translate(0%);
+    }
+    100% {
+        transform: translate(-100%);
+    }
+}
+
+@keyframes slide-reverse-in {
+    0% {
+        transform: translate(100%);
+    }
+    100% {
+        transform: translate(0%);
+    }
+}
+
+@keyframes slide-reverse-out {
+    0% {
+        transform: translate(0%);
+    }
+    100% {
+        transform: translate(100%);
+    }
+}
