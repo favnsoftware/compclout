@@ -57,7 +57,7 @@ export const Modal:FC<ModalTypes> = ({show, children, center = true, transition,
             setShouldShow(show);
             setCurTimeout(null);
         }, show ? 0 : 500));
-    }, [show]);
+    }, [show, curTimeout, hasOpenOnce]);
 
     let curTransition = null;
     if (transition) {

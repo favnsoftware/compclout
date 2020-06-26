@@ -50,7 +50,7 @@ export const Collapse:FC<CollapseTypes> = ({visible, children }) => {
             }
         }
 
-    }, [visible, rootRef])
+    }, [visible, rootRef, heightTimeout])
 
     return (
         <div
