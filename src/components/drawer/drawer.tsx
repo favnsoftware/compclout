@@ -1,14 +1,13 @@
 import React, { FC } from 'react'
-import styles from './drawer.module.css'
 
 // Components
 import { Modal } from '../modal'
 
 type DrawerTypes = {
     /**
-     * Drawer className style
+     * Styling used in Drawer div className
      */
-    className: string;
+    styling?: string;
     /**
      * Children contained inside Drawer
      */
@@ -28,11 +27,12 @@ type DrawerTypes = {
 }
 
 
-export const Drawer:FC<DrawerTypes> = ({className = styles, children, show, anchor = 'left', width = 200, ...rest}) => {
+export const Drawer:FC<DrawerTypes> = ({styling = 'absolute bg-white shadow-2xl', children, show, anchor = 'left', width = 200, ...rest}) => {
 
     const styleObject = {width};
     let anchorStyles = '';
     let transition = '';
+
 
     switch(anchor) {
 
@@ -58,7 +58,7 @@ export const Drawer:FC<DrawerTypes> = ({className = styles, children, show, anch
             center={false}
             transition={transition}
             >
-            <div className={`${className} ${anchorStyles} absolute bg-white shadow-2xl`} style={styleObject}>
+            <div className={`${styling} ${anchorStyles} `} style={styleObject}>
                 { children }
             </div>
         </Modal>
