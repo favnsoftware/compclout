@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react'
-/*import styles from './textfield.module.css'*/
+import styles from './textfield.module.css'
 
 type TextFieldTypes = {
     /**
@@ -24,15 +24,6 @@ type TextFieldTypes = {
     back?: string;
 }
 
-const BASE = 'mb-6 mt-4 w-full'
-const TEXT = 'subtitle1 font-semibold mb-1' 
-const FRAME = 'rounded border border-solid border-${hasFocus ? color : borderColor} flex items-center'
-const PADDING_FRONT = 'pl-4'
-const PADDING_BACK = 'pr-4'
-const INPUT = 'px-4 py-2 border-none rounded focus:outline-none w-full'
-const ERROR_MESSAGE = 'text-red-600'
-
-
 export const TextField: FC<TextFieldTypes> = ({ label = "Some label", front, hint = "Information", error, back }) => {
     
     const [hasFocus, setHasFocus] = useState(false);
@@ -51,25 +42,25 @@ export const TextField: FC<TextFieldTypes> = ({ label = "Some label", front, hin
     }
 
     return (
-        <div className={BASE}>
+        <div className={styles.base}>
             {
-                label && <p className={TEXT}> { label }</p>
+                label && <p className={`${styles.text} subtitle1`}> { label }</p>
             }
-            <div className={FRAME}>
+            <div className={`${styles.frame} border-${hasFocus ? `primary` : borderColor}`}>
                 {
                     front && 
-                    <div className={PADDING_FRONT}>
+                    <div className={`pl-4`}>
                         { front }
                     </div>
                 }
                 <input
-                    className={INPUT}
+                    className={`px-4 py-2 border-none rounded focus:outline-none w-full`}
                     onFocus={onFocus}
                     onBlur={onBlur}
                 />
                 {
                     back &&
-                    <div className={PADDING_BACK}>
+                    <div className={`pr-4`}>
                         { back }
                     </div>
                 }
@@ -77,7 +68,7 @@ export const TextField: FC<TextFieldTypes> = ({ label = "Some label", front, hin
             </div>
             {
                { hint }  &&
-                <p className = {error ? ERROR_MESSAGE : ''}>
+                <p className = {error ? `text-red-600` : ''}>
                     { hint }
                 </p>
             }

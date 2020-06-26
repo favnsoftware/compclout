@@ -10,7 +10,7 @@ export default {
 
 
 
-export const first = () => {
+export const primary = () => {
     const maxLength = number("Maximum length", 100);
     return (
         <TextArea 

@@ -7,7 +7,7 @@ export default {
     decorators: [withKnobs]
 }
 
-export const first = () => {
+export const primary = () => {
     const label = text("Label", "Information about the field")
     const hint =  text("Hint", "Error message or other information will appear here")
     const error = boolean("Error", false)

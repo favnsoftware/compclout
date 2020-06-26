@@ -1,0 +1,31 @@
+.base {
+    margin-bottom: 6;
+    margin-top: 4;
+    width: full;
+}
+
+.frame {
+    border: solid;
+    border-width: 1px;
+    border-radius: 0.25rem;
+    align-items: center;
+    display: flex;
+    border-color: rgba(203, 213, 224, var(--border-opacity));
+}
+
+.text {
+    margin-bottom: 1;
+    font-weight: semibold;
+    /**subtitle1 */
+}
+
+.input {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}*
+
+input:focus{
+    outline: none;
+}
