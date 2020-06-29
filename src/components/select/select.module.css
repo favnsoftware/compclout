@@ -1,0 +1,14 @@
+.select {
+    min-width: 100px;
+    min-height: 36px;
+}
+
+.content {
+    max-height: 200px;
+    overflow-y: scroll;
+    z-index: 2;
+}
+
+.content::-webkit-scrollbar {
+    width: 0px;
+}

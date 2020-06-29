@@ -14,7 +14,6 @@ type TextAreaTypes = {
      * Verdi
      */
     value: string;
-    
 
 }
 
