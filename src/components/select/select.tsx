@@ -3,25 +3,25 @@ import styles from './select.module.css'
 
 type SelectTypes = {
     /**
-     * Value
-     */
-    value: any;
-    /**
-     * action
+     * Action when selecting
      */
     onChange(): void;
     /**
-     * Data
+     * Dropdown data
      */
-    data: any[];
+    data: {value: string, label: string}[];
     /**
-     * Placeholder
+     * Dropdown title
      */
-    placeholder: any;
+    placeholder: string;
     /**
-     * Color
+     * Color of component
      */
     color: string;
+    /**
+     * Data value
+     */
+    value: string;
 
 
 }
@@ -84,7 +84,6 @@ export const Select: FC<SelectTypes> = ( { value, onChange, data, placeholder, c
                                 className={`px-3 py-3 hover:bg-gray-200 cursor-pointer`}
                             >
                                 {d.label}
-                                
                             </div>
                         ))
                     }
