@@ -1,3 +1,7 @@
-/*.root {
-    background-color: blue !important;
-}*/
+.btn:focus {
+    outline: 0;
+}
+
+.btn-contained:active {
+    filter: brightness(90%);
+}
