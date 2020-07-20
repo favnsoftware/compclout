@@ -13,17 +13,19 @@ export default {
 export const primary = () => {
 
     const iconType = text('Icon type', 'bell')
-    const iconSize = select('Icon size', ['base', 'xl', '2xl', '4xl', '6xl'], 'base')
-    const bgColor = select('Icon background', ['bg-white', 'bg-black', 'bg-blue-700', 'bg-green-700','bg-red-700', 'bg-yellow-700'], 'bg-white')
-    const iconColor = select('Icon color', ['black-700', 'white', 'blue-700', 'green-700','red-700', 'yellow-700'], 'black-700')
+    const bgColor = text('Background color', 'bg-white')
+    const iconSize = select('Icon size', ["xs" , "lg" , "sm" , "1x" , "2x" , "3x" , "4x" , "5x" , "6x" , "7x" , "8x" , "9x" , "10x"], '1x')
+    const iconColor = select('Icon color', ['black', 'white', 'blue', 'red', 'yellow', 'green', 'pink'], 'black')
     return (
         <div>
-            <a className='text-blue-700 underline' href='https://fontawesome.com/v4.7.0/icons/' target='blank'>List of icons</a>
-
-            <p className='underline'>Solid FA Icons:</p>
+            <p>Font awesome has a <a className='text-blue-700 underline' href='https://fontawesome.com/v4.7.0/icons/' target='blank'>list of available icons</a></p>
+            
+            <p className='underline my-8'>Solid FA Icons:</p>
             <Icon
-                className={`${bgColor} text-${iconColor} text-${iconSize} m-3`}
+                className={`${bgColor} m-3`}
                 icon={iconType}
+                size={iconSize}
+                color={iconColor}
             />
 
 

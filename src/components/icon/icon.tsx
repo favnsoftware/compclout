@@ -14,7 +14,7 @@ type IconTypes = {
     /**
      * Specified icon from font-awesome used in the Icon component
      */
-    icon: any;
+    icon: string | string[];
     /**
      * ClassName string that styles the Icon
      */
@@ -27,6 +27,14 @@ type IconTypes = {
      * Possible children contained inside Icon?
      */
     children?: React.ReactNode;
+    /**
+     * Optional size of Icon, from 'xs' to '10x'
+     */
+    size?: any;
+    /**
+     * Optional Icon color
+     */
+    color?: string;
 }
 
 export const Icon:FC<IconTypes> = ({className, ...rest}) => {
