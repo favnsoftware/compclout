@@ -30,7 +30,7 @@ type ButtonTypes = {
      */
     loading?: boolean;
     /**
-     * Boolean value used to set Button spinner color to secondary color or light grey
+     * Boolean value used to set Button spinner color to secondary color or default to light grey
      */
     spinnerColor?: boolean;
     /**
