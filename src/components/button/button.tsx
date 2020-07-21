@@ -59,9 +59,9 @@ export const Button:FC<ButtonTypes> = React.forwardRef(({
     variant='contained', 
     disabled,
     shadow = true,
-    loading, // Necessary? Will not spinner be used in loading logic of websites?
+    loading, 
     spinnerColor, 
-    children, // ??
+    children, 
     onClick,
     size='md',
     ...rest
@@ -104,7 +104,7 @@ export const Button:FC<ButtonTypes> = React.forwardRef(({
         }
     }
 
-    const colorOfSpinner = disabled && !spinnerColor ? 'secondary' : (spinnerColor || 'gray-400');
+    const colorOfSpinner = `${disabled && !spinnerColor ? 'secondary' : (spinnerColor || 'gray-400')}`;
 
     return (
         <button 
