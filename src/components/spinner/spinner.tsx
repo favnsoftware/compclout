@@ -13,14 +13,12 @@ type SpinnerTypes = {
     /**
      * className
      */
-    className: any;
-
+    className?: string;
 }
 
-
-export const Spinner:FC<SpinnerTypes> = ({ size, className}) => {
+export const Spinner:FC<SpinnerTypes> = ({ size='md', className, color='primary'}) => {
 
     return (
-        <div className={`${className || ''} ${styles.spinner} ${styles[size]}`} />    
+        <div className={`${className || ''} ${styles.spinner} ${styles[size]} border-${color}`} />    
     )
 };

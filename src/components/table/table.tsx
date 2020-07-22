@@ -12,7 +12,6 @@ type TableTypes = {
     celled: boolean;
 }
 
-
 export const Table: FC<TableTypes> = ( { children, celled = true } ) => {
 
     return (
@@ -21,4 +20,3 @@ export const Table: FC<TableTypes> = ( { children, celled = true } ) => {
         </table>
     )
 };
-

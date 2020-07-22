@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { TextField } from '../components'
 import { withKnobs, text, boolean } from '@storybook/addon-knobs'
 
@@ -11,7 +11,6 @@ export const primary = () => {
     const label = text("Label", "Information about the field")
     const hint =  text("Hint", "Error message or other information will appear here")
     const error = boolean("Error", false)
-    const Example:FC = () => <p>Object</p>
     return (
         <TextField 
             label = {label}

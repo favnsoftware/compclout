@@ -1,5 +1,4 @@
 import React, { FC } from 'react'
-import styles from './table.module.css'
 
 type TableHeaderTypes = {
     /**
@@ -7,7 +6,6 @@ type TableHeaderTypes = {
      */
     children: React.ReactNode;
 }
-
 
 export const TableHeader: FC<TableHeaderTypes> = ( { children } ) => {
 

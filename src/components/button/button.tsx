@@ -51,8 +51,6 @@ type ButtonTypes = {
     rest?: any;
 }
 
-
-
 export const Button:FC<ButtonTypes> = React.forwardRef(({
     className = '',
     color='primary', 
@@ -75,6 +73,7 @@ export const Button:FC<ButtonTypes> = React.forwardRef(({
 
     let baseStyles = `font-bold px-4 py-2 rounded text-${size}`;
     let btnStyles = `select-none `;
+    
     if(disabled) {
         btnStyles += variant !== 'icon' ? `${baseStyles} cursor-not-allowed opacity-50 bg-gray-400 `
         : 'cursor-not-allowed opacity-50 p-2'

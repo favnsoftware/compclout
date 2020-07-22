@@ -11,4 +11,3 @@ type PortalTypes = {
 export const Portal:FC<PortalTypes> = ({children}) => {
     return ReactDOM.createPortal(children, document.body);
 }
-

@@ -1,5 +1,4 @@
 import React, { FC } from 'react'
-import styles from './table.module.css'
 
 type TableBodyTypes = {
     /**
@@ -7,7 +6,6 @@ type TableBodyTypes = {
      */
     children: React.ReactNode;
 }
-
 
 export const TableBody: FC<TableBodyTypes> = ( { children } ) => {
 
