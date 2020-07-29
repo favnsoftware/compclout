@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import styles from './checkbox.module.css'
+
 type CheckBoxTypes = {
     /**
      * Color used by checkbox
@@ -15,8 +16,7 @@ type CheckBoxTypes = {
     onChange(): void;
 }
 
-// change color default to 'primary' when it functions
-export const CheckBox:FC<CheckBoxTypes> = ({ onChange, value, color = 'blue-700'}) => {
+export const CheckBox:FC<CheckBoxTypes> = ({ onChange, value, color = 'primary'}) => {
 
     const checkedStyles = value ? `border-${color} bg-${color}` : '';
 

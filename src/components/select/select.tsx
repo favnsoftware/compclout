@@ -22,8 +22,6 @@ type SelectTypes = {
      * Data value
      */
     value: string;
-
-
 }
 
 export const Select: FC<SelectTypes> = ( { value, onChange, data, placeholder, color } ) => {

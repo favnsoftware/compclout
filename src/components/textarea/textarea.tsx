@@ -14,7 +14,6 @@ type TextAreaTypes = {
      * Verdi
      */
     value: string;
-
 }
 
 const BASE = 'border border-solid border-gray-400 w-full p-4 rounded focus:border-primary focus:outline-none disabled:bg-gray-200 disabled:cursor-not-allowed'

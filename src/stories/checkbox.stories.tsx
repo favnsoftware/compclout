@@ -10,11 +10,11 @@ export default {
 
 export const primary = () => {
     const checked = boolean("Checked", false)
-    const colors = ['primary', 'blue-700', 'green-700', 'red-700', 'yellow-700']
+    const colors = select('Checkbox color', ['primary', 'secondary', 'blue-700', 'green-700', 'red-700', 'yellow-700'], 'primary')
     return (
         <CheckBox
             value = {checked}
-            color = {select('Color', colors, 'blue-700')}
+            color = {colors}
             onChange = {action('Checked')}
         />
     )

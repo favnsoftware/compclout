@@ -26,8 +26,14 @@ type DrawerTypes = {
     width: number;
 }
 
-
-export const Drawer:FC<DrawerTypes> = ({styling = 'absolute bg-white shadow-2xl', children, show, anchor = 'left', width = 200, ...rest}) => {
+export const Drawer:FC<DrawerTypes> = ({
+    styling = 'absolute bg-white shadow-2xl',
+    children,
+    show,
+    anchor = 'left',
+    width = 200,
+    ...rest
+}) => {
 
     const styleObject = {width};
     let anchorStyles = '';
